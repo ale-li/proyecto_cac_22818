@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+
+   {% load static %}
+
+<!-- CSS only -->
+<link href="{% static 'servinquilino/css/style.css' %}" rel="stylesheet">
+<link href="{% static 'servinquilino/css/bootstrap.min.css' %}" rel="stylesheet" integrity="sha 384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+
+<body>
+<header>
+    <div
+    class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+    <!-- Copyright -->
+    {% block buttom %}<buttom> </buttom> {% endblock buttom %}
+    <div class="text-white mb-3 mb-md-0">
+   
+    </div>
+</div>
+</header>
+
+
+    <section class="vh-100">
+        <div class="container-fluid h-custom">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+              <img src= "{% static 'servinquilino/img/logo.png' %}"  width="80%" class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+              <div>
+<!--el contenido que cambia-->
+             
+{% block content %}
+
+{% endblock %}
+
+
+            </div>
+  </section>
+      
+  <footer>
+      <div
+        class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+        <!-- Copyright -->
+        <div class="text-white mb-3 mb-md-0">
+          Copyright © 2020. All rights reserved.
+        </div>
+       
+      </footer>
+ 
+</body>
+
+</html>

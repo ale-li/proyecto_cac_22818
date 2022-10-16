@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+
+{% block buttom %}<buttom  style="color:white">Cerrar cesion </buttom> {% endblock buttom %}
+{% block content %}
+
+<br>
+<div class="row" >
+    <div class="col-sm-16">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><center>DIRECCION DE LA PROPIEDAD: CALLE ALTURA</center> </h5>
+          <p class="card-text"><center> DATOS UNIDAD FUNCIONAL:  PISO Y NÚMERO </center></p>
+          </div>
+      </div>
+<br>
+
+    </div>
+     <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><center>EXPENSAS PENDIENTES DE PAGO: MES </center> </h5>
+          <p class="card-text">MONTO EN PESOS.</p>
+                              </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><center>ULTIMAS EXPENSAS  PAGADAS</center></h5>
+          <p class="card-text"><center>MONTO EN PESOS</center></p>
+          
+        </div>
+      </div>
+    </div>
+
+    {% endblock %}
