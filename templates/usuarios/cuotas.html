@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<h1>Cuotas</h1>
+
+<ul>
+  {% for cuota in cuotas %}
+  <li>
+    <a href="{% url 'detalle_cuotas' cuota.IdExpensa %}">
+      {% if cuota.fechapago %}
+        <strong>{{cuota.anio}} {{cuota.mes}} {{cuota.importe}}</strong>
+      {% else %}
+        {{cuota.anio}} {{cuota.mes}} {{cuota.importe}}
+      {% endif %}
+      <p>{{cuota.pagado}}</p>
+
+      {{cuota.fechapago|date:'M j Y:i'}}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

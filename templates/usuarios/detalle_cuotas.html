@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+{{cuota.title}}
+
+{{error}}
+
+<form method="POST">
+  {% csrf_token %}
+  {{form.as_p}}
+
+  <button>
+    Actualizar
+  </button>
+</form>
+
+<form action="{% url 'pagar_cuota' cuota.IdExpensa %}" method="POST">
+  {% csrf_token %}
+  <button>
+    Cobrar
+  </button>
+</form>
+
+<form action="{% url 'borrar_cuota' cuota.IdExpensa %}" method="POST">
+  {% csrf_token %}
+  <button>
+    Borrar
+  </button>
+</form>
+
+{% endblock %}
