@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+
+<h1>Crear Datos de Inquilino</h1>
+
+{{error}}
+
+<div class=""row">
+  <div = class="col-18 col-md-2 offset-md-5">
+<div  class="card">
+  <div class=""card-body">
+<form action="" method="POST">
+
+  {% csrf_token %}
+
+  {{form }}
+
+</div>
+</div>
+
+<div class=" d-flexjustify-content-center">
+  <button  type="sumit" value="guardar" class="btn btn-primary">Guardar</button>
+  <p></p>
+  <button type="reset" value="limpiar" class="btn btn-primary">Limpiar </button>
+
+
+
+
+</div>"
+
+</form>
+{% endblock %}

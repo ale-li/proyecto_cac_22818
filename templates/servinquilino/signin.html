@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+<h1>Ingresar</h1>
+
+<p>
+{{error}}
+</p>
+
+<form action="/signin/" method="POST">
+  {% csrf_token %}
+  <div class="form-outline mb-4">
+  {{form.as_p}}
+  </div>
+
+  <button>
+    Ingresar
+  </button>
+</form>
+
+{% endblock %}

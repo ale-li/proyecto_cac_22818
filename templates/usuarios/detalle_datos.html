@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{{datos.title}}
+
+{{error}}
+
+<form method="POST">
+  {% csrf_token %}
+  {{form.as_p}}
+
+  <button>
+    Actualizar
+  </button>
+</form>
+
+<form action="{% url 'borrar_dato' dato.IdUsuario %}" method="POST">
+  {% csrf_token %}
+  <button>
+    Borrar
+  </button>
+</form>
+
+{% endblock %}

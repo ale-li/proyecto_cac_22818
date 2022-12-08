@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<h1>Datos Inquilinos</h1>
+
+<ul>
+  {% for dato in datos %}
+  <li>
+    <a href="{% url 'detalle_datos' dato.IdUsuario %}">
+        {{dato.IdUsuario}} {{dato.dni}} {{dato.apellido}} {{dato.nombre}}</p>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

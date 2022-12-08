@@ -1,0 +1,62 @@
+<nav class="navbar fixed-top  navbar-expand-lg navbar-dark bg-primary">
+  <!-- style="background-color: #e3f2fd;"> -->
+<!-- navbar-expand-lg navbar-dark bg-dark"> -->
+  <div class="container">
+    <a class="navbar-brand" href="/">ServInquilino</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+        <!--  {% if user.is_authenticated %}
+          <a href="/usuarios" class="nav-link">home</a>
+          {% else %}
+          <a href="/home" class="nav-link">Home</a>
+          {% endif %}-->
+        </li>
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a href="{% url 'datos' %}" class="nav-link">Datos</a>
+        </li>
+       <!-- <li class="nav-item">
+          <a href="{% url 'crear_datos' %}" class="nav-link">Crear Datos</a>
+        </li>-->
+        <li class="nav-item">
+          <a href="{% url 'cuotas' %}" class="nav-link">Cuotas</a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'pagar_cuota' %}" class="nav-link">Pagar Cuota</a>
+        </li>
+        <li class="nav-item">
+        <!--  <a href="{% url 'crear_expensas' %}" class="nav-link">Crear Cuota Expensa</a>
+        </li>-->
+
+        <!--<li class="nav-item">
+          <a href="/signup" class="nav-link">Registrar</a>
+        </li>-->
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Salir</a>
+        </li>
+        {% else %}
+
+        <li class="nav-item">
+          <a href="/signin" class="nav-link">Ingresar</a>
+        </li>
+        {% endif %}
+      
+        <li class="nav-item">
+          <a href="/nosotros" class="nav-link">Nosotros</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
